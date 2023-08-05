@@ -20,7 +20,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   return (
     <div
       className={
-        " lg:animate-none w-screen lg:w-auto h-[100vh] lg:h-[80vh] left-0 bottom-0 absolute lg:relative lg:flex col-span-4 bg-white border border-green-400" +
+        " lg:animate-none w-screen lg:w-auto h-[100vh] lg:h-[80vh] left-0 bottom-0 fixed lg:relative lg:flex col-span-4 bg-white border border-green-400" +
         " " +
         currentAnimation +
         " " +
