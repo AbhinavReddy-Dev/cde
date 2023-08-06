@@ -4,7 +4,7 @@ const SDGoalCard = ({ goal, setCurrentGoal }) => {
   return (
     <button
       onClick={() => setCurrentGoal((g) => goal)}
-      className=" h-auto min-h-[150px] w-full md:hover:scale-105 transition-all">
+      className=" h-auto min-h-[100px] w-full md:hover:scale-105 transition-all">
       <img
         src={`/SDGIcons/${goal}.png`}
         alt={`S D Goal ${goal}`}

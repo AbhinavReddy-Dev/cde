@@ -5,7 +5,7 @@ const PageLayout = ({ children }) => {
   return (
     <>
       <Navigation />
-      <main className=" p-4">{children}</main>
+      <main className=" m-3 md:m-5">{children}</main>
     </>
   );
 };
