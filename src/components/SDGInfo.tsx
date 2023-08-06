@@ -4,7 +4,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   const [currentAnimation, setCurrentAnimation] = useState("");
   const [hideInfoStyle, setHideInfoStyle] = useState("hidden");
   useEffect(() => {
-    if (currentGoal) {
+    if (currentGoal && document.body.clientWidth < 768) {
       setCurrentAnimation((a) => "animate-slide-to-top");
       setHideInfoStyle((h) => "");
       document.body.style.overflow = "hidden";
@@ -22,7 +22,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   return (
     <div
       className={
-        " overflow-y-scroll lg:animate-none w-screen lg:w-auto h-[100vh] lg:h-[100%] left-0 top-0 fixed lg:relative lg:flex col-span-4 bg-white border border-green-400" +
+        "lg:animate-none w-screen lg:w-auto h-[100vh] lg:h-[100%] left-0 lg:relative lg:flex col-span-4 bg-white border border-gray-400 lg:rounded-lg" +
         " " +
         currentAnimation +
         " " +
@@ -34,17 +34,22 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
             className={
               "flex px-3 py-2 justify-between items-center w-full h-fit sticky top-0"
             }>
-            <h3> S D Goal Info {currentGoal}</h3>
+            <h3 className=" font-medium text-gray-700">
+              {" "}
+              S D Goal Info {currentGoal}
+            </h3>
             <button
               onClick={handleCloseGoalInfo}
-              className="block lg:hidden p-2 px-4 rounded-full border border-gray-200 bg-gray-600 text-white">
-              X
+              className="block lg:hidden p-1 px-2 rounded-full  bg-gray-200 text-gray-700">
+              ⓧ
             </button>
           </div>
-          <article className=" z-50 h-full w-full overflow-y-scroll border border-red-400"></article>
+          <article className=" h-full w-full overflow-y-scroll border border-red-50"></article>
         </aside>
       ) : (
-        <p className="m-auto text-center">Please select an S D Goal</p>
+        <p className="m-auto text-center text-gray-500 font-light">
+          Please select an S D Goal.
+        </p>
       )}
     </div>
   );

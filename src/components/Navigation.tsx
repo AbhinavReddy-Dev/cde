@@ -2,11 +2,16 @@ import React from "react";
 
 const Navigation = () => {
   return (
-    <nav className=" border flex flex-col border-red-400 gap-2 px-2 md:px-4 w-full mb-6 sticky top-0 bg-white">
-      <div className="flex justify-between py-2 text-blue-700 border-b border-gray-400">
-        <p>Logo</p> <p>SDG Logo</p>
+    <nav className="z-50 flex flex-col gap-2 px-2 py-3 md:px-5 w-full mx-auto md:my-6 sticky top-0  border border-gray-100 bg-white shadow-sm rounded-lg">
+      <div className="flex justify-between py-2 text-blue-700 border-b border-gray-200">
+        <p>Logo</p>
+        <img
+          src="/SDGlogoAndSDGWheel/colorWEB/horizontal.png"
+          alt="SDG logo"
+          className="h-8"
+        />
       </div>
-      <ul className=" flex justify-between w-full text-sm pb-2 text-gray-600">
+      <ul className=" flex justify-between w-full text-sm py-2 text-gray-600">
         <li>SDGs</li>
         <li>About Us</li>
         <li>Our Work</li>
