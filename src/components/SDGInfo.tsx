@@ -2,39 +2,47 @@ import React, { useEffect, useState } from "react";
 
 const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   const [currentAnimation, setCurrentAnimation] = useState("");
-  const [hideInfo, setHideInfo] = useState("hidden");
+  const [hideInfoStyle, setHideInfoStyle] = useState("hidden");
   useEffect(() => {
     if (currentGoal) {
       setCurrentAnimation((a) => "animate-slide-to-top");
-      setHideInfo((h) => "");
+      setHideInfoStyle((h) => "");
+      document.body.style.overflow = "hidden";
     }
   }, [currentGoal]);
 
   const handleCloseGoalInfo = () => {
     setCurrentAnimation((a) => "animate-slide-to-bottom ");
+    document.body.style.overflow = "auto";
     setTimeout(() => {
       setCurrentGoal((g) => null);
-      setHideInfo((h) => "hidden");
+      setHideInfoStyle((h) => "hidden");
     }, 500);
   };
   return (
     <div
       className={
-        " lg:animate-none w-screen lg:w-auto h-[100vh] lg:h-[80vh] left-0 bottom-0 fixed lg:relative lg:flex col-span-4 bg-white border border-green-400" +
+        " overflow-y-scroll lg:animate-none w-screen lg:w-auto h-[100vh] lg:h-[100%] left-0 top-0 fixed lg:relative lg:flex col-span-4 bg-white border border-green-400" +
         " " +
         currentAnimation +
         " " +
-        hideInfo
+        hideInfoStyle
       }>
       {currentGoal ? (
-        <div className={"flex px-3 py-4 justify-between w-full h-fit"}>
-          <h3> S D Goal Info {currentGoal}</h3>
-          <button
-            onClick={handleCloseGoalInfo}
-            className="block lg:hidden p-2 px-4 rounded-full border border-gray-200 bg-gray-600 text-white">
-            X
-          </button>
-        </div>
+        <aside className="flex flex-col w-full h-full">
+          <div
+            className={
+              "flex px-3 py-2 justify-between items-center w-full h-fit sticky top-0"
+            }>
+            <h3> S D Goal Info {currentGoal}</h3>
+            <button
+              onClick={handleCloseGoalInfo}
+              className="block lg:hidden p-2 px-4 rounded-full border border-gray-200 bg-gray-600 text-white">
+              X
+            </button>
+          </div>
+          <article className=" z-50 h-full w-full overflow-y-scroll border border-red-400"></article>
+        </aside>
       ) : (
         <p className="m-auto text-center">Please select an S D Goal</p>
       )}
