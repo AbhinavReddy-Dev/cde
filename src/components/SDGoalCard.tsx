@@ -1,14 +1,19 @@
 import React from "react";
 
-const SDGoalCard = ({ goal, setCurrentGoal }) => {
+const SDGoalCard = ({ goal, currentGoal, setCurrentGoal }) => {
   return (
     <button
       onClick={() => setCurrentGoal((g) => goal)}
-      className=" h-auto min-h-[100px] w-full md:hover:scale-105 transition-all">
+      className={
+        " h-fit w-full md:hover:scale-105 transition-all " +
+        (currentGoal?.id === goal.id
+          ? "border-4 border-dashed border-blue-300 shadow-lg rounded-xl"
+          : " ")
+      }>
       <img
-        src={`/SDGIcons/${goal}.png`}
-        alt={`S D Goal ${goal}`}
-        className="cover w-full h-full rounded-lg"
+        src={`/SDGIcons/${goal.id}.png`}
+        alt={`${goal.name}`}
+        className="cover w-full h-auto z-10 rounded-lg text-gray-400"
       />
     </button>
   );

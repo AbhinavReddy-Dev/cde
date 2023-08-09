@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SDGInfoCards from "./SDGInfoCards";
 
 const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   const [currentAnimation, setCurrentAnimation] = useState("");
@@ -22,33 +23,34 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   return (
     <div
       className={
-        "z-50 lg:z-0  lg:animate-none p-2 w-screen lg:w-auto h-[100vh] lg:h-[100%] left-0 top-0 fixed lg:relative lg:flex col-span-4 bg-white lg:border-2 lg:border-gray-400 lg:rounded-lg" +
+        "z-50 lg:z-0  lg:animate-none p-2 w-screen lg:w-auto left-0 top-0 h-screen lg:max-h-[700px]  fixed lg:relative lg:flex col-span-4 row bg-white lg:border lg:border-gray-200 lg:rounded-lg" +
         " " +
         currentAnimation +
         " " +
         hideInfoStyle
       }>
       {currentGoal ? (
-        <aside className="flex flex-col w-full h-full">
+        <aside className="flex flex-col max-h-screen w-full overflow-scroll p-2 pt-0 ">
           <div
             className={
-              "flex px-3 py-2 justify-between items-center w-full h-fit sticky top-0"
+              "flex  justify-between bg-white items-center w-full pt-2 h-fit sticky top-0 left-0"
             }>
-            <h3 className=" font-medium text-gray-700">
-              {" "}
-              S D Goal Info {currentGoal}
+            <h3 className=" font-semibold mb-2 text-lg md:text-xl text-gray-700 uppercase">
+              {currentGoal.id}. {currentGoal.name}
             </h3>
             <button
               onClick={handleCloseGoalInfo}
-              className="block lg:hidden p-1 px-2 rounded-full  bg-gray-200 text-gray-700">
+              className="block lg:hidden px-1 font-bold text-lg rounded-full  bg-gray-200 text-gray-700">
               ⓧ
             </button>
           </div>
-          <article className=" h-full w-full overflow-y-scroll "></article>
+          <article className=" h-full w-full overflow-scroll">
+            <SDGInfoCards currentGoal={currentGoal} />
+          </article>
         </aside>
       ) : (
-        <p className="m-auto text-center text-gray-500 font-light">
-          Please select an S D Goal.
+        <p className="m-auto bg-slate-200 p-3 px-5 rounded-lg text-sm text-center text-gray-700 font-light">
+          Please select an SDG.
         </p>
       )}
     </div>
