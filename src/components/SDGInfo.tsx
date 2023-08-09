@@ -23,7 +23,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
   return (
     <div
       className={
-        "z-50 lg:z-0  lg:animate-none p-2 w-screen lg:w-auto left-0 top-0 h-screen lg:max-h-[700px]  fixed lg:relative lg:flex col-span-4 row bg-white lg:border lg:border-gray-200 lg:rounded-lg" +
+        "z-50 lg:z-0  lg:animate-none p-2 w-screen lg:w-auto left-0 top-0 h-screen lg:max-h-[500px]  fixed lg:relative lg:flex col-span-4 row bg-white lg:border lg:border-gray-200 lg:rounded-lg" +
         " " +
         currentAnimation +
         " " +
