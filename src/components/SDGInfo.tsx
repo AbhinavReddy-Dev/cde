@@ -35,12 +35,14 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
             className={
               "flex  justify-between bg-white items-center w-full pt-2 h-fit sticky top-0 left-0"
             }>
-            <h3 className=" font-semibold mb-2 text-lg md:text-xl text-gray-700 uppercase">
+            <h3
+              className=" font-bold mb-2 text-lg md:text-xl text-gray-700 uppercase"
+              style={{ textWrap: "balance" }}>
               {currentGoal.id}. {currentGoal.name}
             </h3>
             <button
               onClick={handleCloseGoalInfo}
-              className="block lg:hidden px-1 font-bold text-lg rounded-full  bg-gray-200 text-gray-700">
+              className="block lg:hidden px-1 font-bold text-lg rounded-full  bg-gray-200 text-gray-700 hover:bg-gray-300">
               ⓧ
             </button>
           </div>

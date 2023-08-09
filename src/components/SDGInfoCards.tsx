@@ -26,7 +26,6 @@ const SDGInfoCards = ({ currentGoal }) => {
     <div>
       {projectsInfo && projectsInfo.length > 0 && !projectsInfoLoading ? (
         <>
-          {" "}
           {projectsInfo.map((p) => (
             <div
               key={p.id}
@@ -38,7 +37,7 @@ const SDGInfoCards = ({ currentGoal }) => {
               <div className=" flex flex-wrap gap-2 my-2 font-normal text-xs md:text-sm items-center">
                 <p className="font-medium text-xs md:text-sm">
                   <span className=" text-teal-700 font-semibold">
-                    {p.people_trained.count} {p.people_trained.profession}{" "}
+                    {p.people_trained.count} {p.people_trained.profession}
                   </span>
                 </p>
                 <p> trained in </p>
@@ -51,7 +50,7 @@ const SDGInfoCards = ({ currentGoal }) => {
                 ))}
               </div>
               <div className=" text-sm text-gray-600 font-semibold mt-4">
-                <p>Location(s)</p>
+                <p>Locations</p>
                 <div className=" flex flex-wrap gap-2 mt-1 text-indigo-600">
                   {p.locations.map((l) => (
                     <span
@@ -63,19 +62,19 @@ const SDGInfoCards = ({ currentGoal }) => {
                 </div>
               </div>
               <div className=" text-sm text-gray-600 font-semibold mt-4">
-                <p>Department(s)</p>
+                <p>Departments</p>
                 <div className=" flex flex-wrap gap-2 mt-1 text-gray-700">
                   {p.departments.map((d) => (
                     <span
                       key={d}
-                      className="text-xs font-medium border border-gray-200 rounded-md px-2 py-1 bg-gray-50">
+                      className="text-xs font-medium border border-gray-100 rounded-md px-2 py-1 bg-gray-50">
                       {d}
                     </span>
                   ))}
                 </div>
               </div>
               <div className=" text-sm text-gray-600 font-semibold mt-4">
-                <p>Achievement(s)</p>
+                <p>Achievements</p>
                 <div className=" flex flex-wrap gap-2 mt-1 text-violet-600">
                   {p.achievements.map((a) => (
                     <span
