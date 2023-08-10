@@ -37,7 +37,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
             }>
             <h3
               className=" font-bold mb-2 text-lg md:text-xl text-gray-700 uppercase"
-              style={{ textWrap: "balance" }}>
+              style={{ whiteSpace: "normal" }}>
               {currentGoal.id}. {currentGoal.name}
             </h3>
             <button
@@ -46,7 +46,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
               ⓧ
             </button>
           </div>
-          <article className=" h-full w-full overflow-scroll">
+          <article className=" h-full w-full overflow-scroll pb-16">
             <SDGInfoCards currentGoal={currentGoal} />
           </article>
         </aside>
