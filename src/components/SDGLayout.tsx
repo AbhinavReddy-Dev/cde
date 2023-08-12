@@ -3,7 +3,7 @@ import SDGoals from "./SDGoals";
 import SDGInfo from "./SDGInfo";
 
 const SDGLayout = () => {
-  const [currentGoal, setCurrentGoal] = useState(null);
+  const [currentGoal, setCurrentGoal] = useState();
   return (
     <div className="lg:grid md:h-min lg:max-h-[700px] w-full lg:grid-cols-10 lg:gap-4 mt-3 md:mt-6 ">
       <SDGoals setCurrentGoal={setCurrentGoal} currentGoal={currentGoal} />
@@ -13,4 +13,3 @@ const SDGLayout = () => {
 };
 
 export default SDGLayout;
-6872095643;

@@ -7,7 +7,7 @@ const SDGoalCard = ({ goal, currentGoal, setCurrentGoal }) => {
       className={
         " h-fit w-full md:hover:scale-105 transition-all " +
         (currentGoal?.id === goal.id
-          ? "border-4 border-dashed border-blue-300 shadow-lg rounded-xl"
+          ? "border-4 border-dashed border-gray-400 shadow-lg rounded-xl"
           : " ")
       }>
       <img

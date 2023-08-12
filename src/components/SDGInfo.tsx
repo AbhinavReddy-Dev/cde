@@ -36,7 +36,7 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
               "flex  justify-between bg-white items-center w-full pt-2 h-fit sticky top-0 left-0"
             }>
             <h3
-              className=" font-bold mb-2 text-lg md:text-xl text-gray-700 uppercase"
+              className=" font-bold mb-2 text-lg md:text-xl text-gray-700 uppercase tracking-wider"
               style={{ whiteSpace: "normal" }}>
               {currentGoal.id}. {currentGoal.name}
             </h3>
@@ -46,13 +46,13 @@ const SDGInfo = ({ currentGoal, setCurrentGoal }) => {
               ⓧ
             </button>
           </div>
-          <article className=" h-full w-full overflow-scroll pb-16">
+          <article className=" h-full w-full overflow-scroll pb-10 md:pb-8">
             <SDGInfoCards currentGoal={currentGoal} />
           </article>
         </aside>
       ) : (
-        <p className="m-auto bg-slate-200 p-3 px-5 rounded-lg text-sm text-center text-gray-700 font-light">
-          Please select an SDG.
+        <p className="m-auto bg-slate-100 p-3 px-5 rounded-lg text-sm text-center text-gray-700 font-normal">
+          Please select an SDG on the left.
         </p>
       )}
     </div>

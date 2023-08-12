@@ -29,16 +29,14 @@ const SDGInfoCards = ({ currentGoal }) => {
           {projectsInfo.map((p) => (
             <div
               key={p.id}
-              className=" mt-2 text-gray-500 border-b py-3 border-gray-200">
-              <h3 className="text-gray-600 font-bold text-md md:text-lg">
+              className=" my-4 rounded-lg text-gray-500 border p-3 border-gray-200 bg-slate-50">
+              <h3 className="text-gray-600 font-bold text-md md:text-lg tracking-wider">
                 {p.project_name}
               </h3>
 
-              <div className=" flex flex-wrap gap-2 my-2 font-normal text-xs md:text-sm items-center">
-                <p className="font-medium text-xs md:text-sm">
-                  <span className=" text-teal-700 font-semibold">
-                    {p.people_trained.count} {p.people_trained.profession}
-                  </span>
+              <div className=" flex flex-wrap gap-2 mt-3 font-normal text-xs md:text-sm items-center">
+                <p className=" text-teal-700 font-bold text-sm md:text-md">
+                  {p.people_trained.count} {p.people_trained.profession}
                 </p>
                 <p> trained in </p>
                 {p.trained_in.map((t) => (
@@ -49,7 +47,7 @@ const SDGInfoCards = ({ currentGoal }) => {
                   </p>
                 ))}
               </div>
-              <div className=" text-sm text-gray-600 font-semibold mt-4">
+              <div className=" text-sm text-gray-600 font-semibold mt-5">
                 <p>Locations</p>
                 <div className=" flex flex-wrap gap-2 mt-1 text-indigo-600">
                   {p.locations.map((l) => (
@@ -61,19 +59,19 @@ const SDGInfoCards = ({ currentGoal }) => {
                   ))}
                 </div>
               </div>
-              <div className=" text-sm text-gray-600 font-semibold mt-4">
+              <div className=" text-sm text-gray-600 font-semibold mt-5">
                 <p>Departments</p>
-                <div className=" flex flex-wrap gap-2 mt-1 text-gray-700">
+                <div className=" flex flex-wrap gap-2 mt-1 text-blue-700">
                   {p.departments.map((d) => (
                     <span
                       key={d}
-                      className="text-xs font-medium border border-gray-100 rounded-md px-2 py-1 bg-gray-50">
+                      className="text-xs font-medium border border-blue-100 rounded-md px-2 py-1 bg-blue-50">
                       {d}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className=" text-sm text-gray-600 font-semibold mt-4">
+              <div className=" text-sm text-gray-600 font-semibold mt-5">
                 <p>Achievements</p>
                 <div className=" flex flex-wrap gap-2 mt-1 text-violet-600">
                   {p.achievements.map((a) => (

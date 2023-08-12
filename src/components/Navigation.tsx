@@ -22,12 +22,20 @@ const Navigation = () => {
           className=" h-12 md:h-16"
         />
       </div>
-      <ul className=" flex justify-between w-full text-sm py-2 text-gray-600">
-        <li>SDGs</li>
-        <li>About Us</li>
-        <li>Our Work</li>
-        <li>Resources</li>
-        <li>Contact Us</li>
+      <ul className=" flex justify-between w-full text-sm py-2 text-gray-600 font-semibold">
+        <a className=" cursor-pointer hover:font-bold transition-all"> SDGs </a>
+        <a className=" cursor-pointer hover:font-bold transition-all">
+          About Us
+        </a>
+        <a className=" cursor-pointer hover:font-bold transition-all">
+          Our Work
+        </a>
+        <a className=" cursor-pointer hover:font-bold transition-all">
+          Resources
+        </a>
+        <a className=" cursor-pointer hover:font-bold transition-all">
+          Contact Us
+        </a>
       </ul>
     </nav>
   );

@@ -8,7 +8,7 @@ const data = [
       "State Rural Mission",
     ],
     locations: ["Srikakulam", "Vijayanagaram", "Vishakapatnam"],
-    people_trained: { profession: "Fishermen", count: 5000 },
+    people_trained: { profession: "Fishermen", count: "5,000" },
     trained_in: [
       "Technology on identifying fish",
       "self-employment",
@@ -28,7 +28,7 @@ const data = [
     project_name: "Forestry",
     departments: ["National Forest Department", "FDAP", "State Rural Mission"],
     locations: ["Adilabad", "Araku", "Nalla Malla Forest"],
-    people_trained: { profession: "Farmers", count: 5000 },
+    people_trained: { profession: "Farmers", count: "3,500" },
     trained_in: [
       "Organic Farming",
       "self-employment",
